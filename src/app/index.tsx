@@ -2,8 +2,8 @@ import { StatusBar, Text, View, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Thinkspace!!</Text>
+    <View >
+      <Text className="font-bold text-4xl">Hello Thinkspace!</Text>
       {/* <StatusBar style="auto" /> */}
     </View>
   );
