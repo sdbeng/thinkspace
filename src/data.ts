@@ -29,4 +29,18 @@ export const thinkspaces: ThinkspaceTypes[] = [
         type: 'audio',
         pro: false,
     },
+    {
+        id:5,
+        title: "Staring at th sky",
+        duration: 5,
+        type: 'audio',
+        pro: false,
+    },
+    {
+        id:6,
+        title: "Walking around the block",
+        duration: 12,
+        type: 'audio',
+        pro: false,
+    },
 ]
