@@ -1,12 +1,13 @@
-import { useSearchParams } from "expo-router/build/hooks";
+import { useSearchParams, useLocalSearchParams } from "expo-router/build/hooks";
+import { router } from "expo-router";
 import { Text, View } from "react-native";
 import { thinkspaces } from "@/data";
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 //create detail page for meditation to navigate to whenever i click on a meditation row in the list
 export default function MeditationDetailScreen (){
     const searchParams = useSearchParams();
-    const id = searchParams.get('id');
-    console.log('detail id:', id);
+    const id = searchParams.get('id');    
     const thinkspace = thinkspaces.find(thethinkspace => thethinkspace.id === Number(id));
 
     if(!thinkspace){
@@ -14,8 +15,9 @@ export default function MeditationDetailScreen (){
     }
 
     return (
-        <View>
-            <Text className="text-3xl ">{thinkspace?.title} </Text>
-        </View>
+        <>
+            <AntDesign onPress={() => router.back()} name="close" size={24} color="black" className="absolute top-16 right-10"/>
+            <Text className="text-3xl mt-16">{thinkspace?.title} </Text>
+        </>
     )
 }

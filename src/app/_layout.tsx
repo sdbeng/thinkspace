@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <QueryClientProvider client={queryClient}>     
     <Stack>
         <Stack.Screen name="index" options={{ title: "Home" }}/>
-        <Stack.Screen name="meditation/[id]" options={{ title: "Thinkspaces" }}/>
+        <Stack.Screen name="meditation/[id]" options={{ headerShown: false, animation: 'slide_from_bottom' }}/>
     </Stack>
     </QueryClientProvider>
   );
