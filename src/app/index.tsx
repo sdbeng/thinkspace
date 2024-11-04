@@ -19,11 +19,11 @@ function ThinkspaceListItem(props) {
 
     return (
       <View className="flex-row items-center gap-5">
-        <View className="bg-green-400 p-1 rounded-full">
+        <View className="bg-green-500 p-1 rounded-full">
         <Ionicons name="shield-checkmark-outline" size={18} color="white" />
         </View>
 
-        <View className="flex-1 p-5 border-2 border-gray-300 rounded-2xl">            
+        <View className="flex-1 p-5 py-5 border-2 border-gray-300 rounded-2xl">            
             <Text className="font-semibold text-2xl mb-2">{title}</Text>
             <View className="flex-row items-center gap-2">
             <FontAwesome6 name="clock" size={16} color="#6B7280" />
@@ -40,7 +40,7 @@ export default function HomeScreen() {
     <FlatList 
         data={thinkspaces}
         className="bg-gray-100"
-        contentContainerClassName="gap-5 p-3"
+        contentContainerClassName="gap-8 p-3"
         renderItem={({item}) => <ThinkspaceListItem thinkspaceData={item} />}
     />
   );
