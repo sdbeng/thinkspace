@@ -1,6 +1,7 @@
 import { StatusBar, Text, View, StyleSheet, FlatList } from "react-native";
 import { thinkspaces } from "../data";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useQuery } from "@tanstack/react-query";
 
 const thinkspaceData = thinkspaces[0];// it will be the first thinkspace object
@@ -11,19 +12,25 @@ function ThinkspaceListItem(props) {
     const {title, duration} = props.thinkspaceData;
     // console.log('title:', title);    
 
-    const {data, error, isLoading} = useQuery({queryKey: ['thinkData'], queryFn: () => fetch('data')});
-    if (isLoading) return <Text>Loading...</Text>
-    console.log('tanstck data:', data);
+    // const {data, error, isLoading} = useQuery({queryKey: ['thinkData'], queryFn: () => fetch('data')});
+    // if (isLoading) return <Text>Loading...</Text>
+    // console.log('tanstck data:', data);
     
 
     return (
-        <View className="p-5 border-2 border-gray-300 rounded-2xl">
-            <Text className="font-semibold text-2xl mb-2">{"test title"}</Text>
+      <View className="flex-row items-center gap-5">
+        <View className="bg-green-400 p-1 rounded-full">
+        <Ionicons name="shield-checkmark-outline" size={18} color="white" />
+        </View>
+
+        <View className="flex-1 p-5 border-2 border-gray-300 rounded-2xl">            
+            <Text className="font-semibold text-2xl mb-2">{title}</Text>
             <View className="flex-row items-center gap-2">
             <FontAwesome6 name="clock" size={16} color="#6B7280" />
-            <Text className="text-gray-500">{"test duration"} min</Text>    
+            <Text className="text-gray-500">{duration} min</Text>    
 
             </View>
+      </View>
         </View>
     )
 }

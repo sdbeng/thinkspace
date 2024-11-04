@@ -31,7 +31,7 @@ export const thinkspaces: ThinkspaceTypes[] = [
     },
     {
         id:5,
-        title: "Staring at th sky",
+        title: "Staring at the sky",
         duration: 5,
         type: 'audio',
         pro: false,
@@ -42,5 +42,12 @@ export const thinkspaces: ThinkspaceTypes[] = [
         duration: 12,
         type: 'audio',
         pro: false,
+    },
+    {
+        id:7,
+        title: "Working in the yard",
+        duration: 10,
+        type: 'audio',
+        pro: true,
     },
 ]
