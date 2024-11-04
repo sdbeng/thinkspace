@@ -9,6 +9,10 @@ export default function MeditationDetailScreen (){
     console.log('detail id:', id);
     const thinkspace = thinkspaces.find(thethinkspace => thethinkspace.id === Number(id));
 
+    if(!thinkspace){
+        return <Text>Thinkspace not found!</Text>
+    }
+
     return (
         <View>
             <Text className="text-3xl ">{thinkspace?.title} </Text>
