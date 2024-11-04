@@ -16,8 +16,8 @@ export default function MeditationDetailScreen (){
 
     return (
         <>
-            <AntDesign onPress={() => router.back()} name="close" size={24} color="black" className="absolute top-16 right-10"/>
             <Text className="text-3xl mt-16">{thinkspace?.title} </Text>
+            <AntDesign onPress={() => router.back()} name="close" size={24} color="black" className="absolute top-16 right-10"/>
         </>
     )
 }
