@@ -11,7 +11,7 @@ const thinkspaceData = thinkspaces[0];// it will be the first thinkspace object
 function ThinkspaceListItem(props) {    
     // console.log('props.thinkspaceData:', props.thinkspaceData);    
     const {id, title, duration} = props.thinkspaceData;
-    console.log('master id:', id);    
+    // console.log('master id:', id);    
 
     // const {data, error, isLoading} = useQuery({queryKey: ['thinkData'], queryFn: () => fetch('data')});
     // if (isLoading) return <Text>Loading...</Text>
